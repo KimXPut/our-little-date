@@ -1,0 +1,5 @@
+Rename your MP3 file to:
+
+romantic-piano.mp3
+
+Then place it in this folder. The music button will use it automatically.

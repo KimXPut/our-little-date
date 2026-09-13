@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080710">
+  <meta name="description" content="A little date invitation, made with love.">
+  <title>Our Little Date ♡ 26.09.2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='16' width='64' height='64' fill='%23080710'/%3E%3Cpath d='M32 50S10 38 10 23c0-11 14-14 22-4 8-10 22-7 22 4 0 15-22 27-22 27Z' fill='%23ff5eaa'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <div id="stars" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <p id="chapterLabel">Part 1 of 7 <span>•</span> Invitation</p>
+    <div class="progress" id="progress" aria-label="Story progress"></div>
+  </header>
+
+  <main id="story">
+    <section class="chapter active" data-title="Invitation">
+      <div class="intro">
+        <span class="eyebrow">✦ A special question</span>
+        <h1>Hey sayang… <span class="gradient-heart">♥</span></h1>
+        <p class="script">I have a little question for you…</p>
+        <button class="envelope" id="openEnvelope" aria-label="Open the invitation">
+          <span class="envelope-icon">✉</span>
+          <strong>For my favourite person</strong>
+          <small>Tap to open with love ♡</small>
+        </button>
+        <div class="invitation hidden" id="invitation">
+          <span class="mini-label">♡ Date invitation</span>
+          <h2>Would you like to go on a date with me?</h2>
+          <p>Just you and me, spending a little time together.</p>
+          <div class="choice-row">
+            <button class="primary" id="yesButton">♥ YES ♡</button>
+            <button class="secondary" id="noButton">Not yet</button>
+          </div>
+        </div>
+        <!-- Shown after Yes, before the itinerary. Edit this message freely. -->
+        <div class="final-card hidden" id="thankYou">
+          <span class="eyebrow">YAYYY!! YOU SAID YES! 🥹 💜</span>
+          <h2 tabindex="-1" id="thankYouHeading">Thank you for saying yes, sayang.</h2>
+          <p class="script">I’ve been looking forward to spending a little time with you.</p>
+          <div class="thank-you-note">
+            <p>I don’t need anything fancy.</p>
+            <p>I just want a day where we can laugh, talk about random things, eat something good, and make another little memory together.</p>
+          </div>
+          <p class="script">Thank you for choosing to spend your day with baby. 💜</p>
+          <button class="primary full" data-next>CONTINUE ♡ ♥</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" data-title="Our Date">
+      <div class="wide-content">
+        <span class="eyebrow">26 September 2026</span>
+        <h1>Our Little Date ♡</h1>
+        <p class="script">A whole afternoon made for us.</p>
+        <div class="timeline">
+          <article><time>12:00 PM</time><span>01</span><h3>I’ll pick you up</h3><p>Our little day together begins the moment I see you.</p></article>
+          <article><time>12:30 PM</time><span>02</span><h3>Lunch together</h3><p>Good food, a little conversation, and my favourite company.</p></article>
+          <article><time>2:30 PM</time><span>03</span><h3>National Art Museum</h3><p>Let’s explore the art together and find our favourite pieces.</p></article>
+          <article><time>4:30 PM</time><span>04</span><h3>Café hunting</h3><p>A cosy stop for coffee, something sweet, and more time with you.</p></article>
+          <article><time>6:00 PM</time><span>05</span><h3>I’ll take you home</h3><p>I’ll bring you home with a heart full of little memories from our day.</p></article>
+        </div>
+        <button class="primary full" data-next>Play our date bingo <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="chapter" data-title="Bingo">
+      <div class="wide-content compact">
+        <span class="eyebrow">✦ A little game</span>
+        <h1>Our Date Bingo ♡</h1>
+        <p class="script">Let’s see how many moments we collect.</p>
+        <div class="score"><span>♥</span> <b id="score">0</b> of 8 completed</div>
+        <div class="bingo-grid" id="bingoGrid">
+          <button>Take a cute picture <span>📸</span></button><button>Make each other laugh <span>🤭</span></button>
+          <button>Try something new <span>✨</span></button><button>Find a cosy café <span>☕</span></button>
+          <button>Buy something random <span>🛍️</span></button><button>Create a new inside joke <span>🤫</span></button>
+          <button>Share a favourite dessert <span>🍰</span></button><button>Make a moment to remember <span>💜</span></button>
+        </div>
+        <button class="primary full" data-next>There’s one more thing <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="chapter" data-title="A Secret">
+      <div class="intro">
+        <span class="eyebrow">✦ A secret message</span>
+        <h1>One More Thing… 👀</h1>
+        <div class="secret-card" id="secretCard">
+          <div class="lock">⌾</div>
+          <h2>Just a little heartfelt thought…</h2>
+          <button class="primary" id="openSecret">Open it ♡</button>
+          <div class="secret-copy hidden" id="secretCopy">
+            <p>I don’t need a perfect date. I just want a day beside you—laughing, listening, and making another little memory together.</p>
+            <p class="script">Honestly…</p>
+            <h2>Being with you is already enough for me. 💜</h2>
+          </div>
+        </div>
+        <button class="primary full after-secret" data-next>Why you? <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="chapter" data-title="Why You?">
+      <div class="wide-content compact">
+        <span class="eyebrow">✦ From the heart</span>
+        <h1>Why You? ♡</h1>
+        <p class="script">A few reminders of why baby loves you so much.</p>
+        <div class="reasons">
+          <article><b>♡</b><div><h3>Your smile</h3><p>It turns even an ordinary moment into something I want to remember.</p></div></article>
+          <article><b>♡</b><div><h3>Your company</h3><p>Everything feels warmer and more fun when you’re there.</p></div></article>
+          <article><b>♡</b><div><h3>The little things</h3><p>Your tiny habits and thoughtful moments stay in my heart.</p></div></article>
+          <article><b>♡</b><div><h3>Simply you</h3><p>I don’t need a special reason. I love being with you exactly as you are.</p></div></article>
+        </div>
+        <p class="script closing-line">I hope you always know how grateful baby is for you. 💜</p>
+        <button class="primary full" data-next>See our date details <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="chapter" data-title="Details">
+      <div class="wide-content compact">
+        <span class="eyebrow">✦ Official confirmation</span>
+        <h1>♡ Our Date ♡</h1>
+        <div class="details-card">
+          <span class="confirmed">♥ It’s a date!</span>
+          <h2>26 September 2026</h2>
+          <p class="start-time">◷ 12:00 PM onwards</p>
+          <dl><div><dt>Dress code</dt><dd>Come as your beautiful self 💜</dd></div><div><dt>Mood</dt><dd>Happy • Comfy • Cute</dd></div><div><dt>Plan</dt><dd>Lunch • Art • Coffee • Memories</dd></div></dl>
+          <p class="script">Our little day begins in…</p>
+          <div class="countdown" id="countdown"><div><b>00</b><small>Days</small></div><div><b>00</b><small>Hours</small></div><div><b>00</b><small>Mins</small></div><div><b>00</b><small>Secs</small></div></div>
+        </div>
+        <button class="primary full" data-next>Final little note <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="chapter" data-title="Forever">
+      <div class="intro">
+        <span class="eyebrow">✦ Sealed with love</span>
+        <div class="final-card">
+          <div class="big-heart">♡</div>
+          <h1>Then it’s a date.</h1>
+          <p class="script">See you on 26 September, sayang.</p>
+          <p>I can’t wait to spend our little day together.</p>
+          <hr>
+          <p class="signature">Made with love,<br>by Hakim ♡</p>
+          <button class="primary full" id="replay">↻ Replay our story</button>
+        </div>
+        <small class="forever">Forever & always ♡</small>
+      </div>
+    </section>
+  </main>
+
+  <button class="music" id="musicButton" aria-label="Toggle background music" title="Add your music as assets/music/romantic-piano.mp3"><span>♪</span><em>Blue - Yung Kai</em></button>
+  <audio id="audio" loop preload="none"><source src="assets/music/romantic-piano.mp3" type="audio/mpeg"></audio>
+  <script src="js/main.js"></script>
+</body>
+</html>
